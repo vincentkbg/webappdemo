@@ -9,7 +9,7 @@ EXPOSE 80
 
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
-COPY ["webappdemo/webappdemo.csproj", "webappdemo/"]
+COPY ["./webappdemo/webappdemo.csproj", "webappdemo/"]
 RUN dotnet restore "webappdemo/webappdemo.csproj"
 COPY . .
 WORKDIR "/src/webappdemo"
